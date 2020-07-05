@@ -1,17 +1,30 @@
-import React,{useState} from 'react';
-import AboutMe from './AboutMe';
+
+import React from 'react';
+import './App.css';
+
+import Header from './components/Header';
+import Work from './components/work';
+import Contact from './components/Contact';
+import Navbar from './components/Navbar'
 
 function App() {
-  const [aboutme, setaboutme]= useState(['aboutme 1,aboutme 2'])
   return (
-    <>
-    <AboutMe aboutme={aboutme} />
-    <input type="text"/>
-</>
-
-
-
-  )
-};
+    <div className="App">
+      <Navbar></Navbar>
+      <div className="App-header">
+      <Header></Header>
+      </div>
+      
+      <div className='About'>
+      </div>
+      <div className='work'>
+        <Work></Work>
+      </div>
+      <div className='contact'>
+        <Contact></Contact>
+      </div>
+    </div>
+  );
+}
 
 export default App;
